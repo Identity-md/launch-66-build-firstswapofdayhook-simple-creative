@@ -1,0 +1,25 @@
+[profile.default]
+src = "src"
+test = "test"
+out = "out"
+libs = ["lib"]
+solc = "0.8.26"
+evm_version = "cancun"
+via_ir = true
+optimizer = true
+optimizer_runs = 200
+bytecode_hash = "none"
+ffi = false
+fs_permissions = []
+remappings = [
+    "forge-std/=lib/forge-std/src/",
+    "v4-core/=lib/v4-core/",
+    "solmate/=lib/solmate/",
+]
+
+[profile.default.fuzz]
+runs = 256
+seed = "0x4444"
+
+[fmt]
+line_length = 110
